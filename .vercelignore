@@ -1,0 +1,6 @@
+# server.js é só para o preview local — na Vercel o site é servido como estático
+server.js
+
+# Arquivos de apoio à edição (não vão para o site publicado)
+COMO-EDITAR.md
+.vscode

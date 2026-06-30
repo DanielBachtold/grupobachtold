@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚀 Publicar site na internet",
+      "detail": "Sobe as alterações para o ar (Vercel). Atalho: Cmd+Shift+B",
+      "type": "shell",
+      "command": "export NVM_DIR=\"$HOME/.nvm\"; [ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"; export PATH=\"$HOME/.nvm/versions/node/v24.18.0/bin:$PATH\"; echo 'Publicando... aguarde 10-40s.'; vercel deploy --prod --yes && echo '' && echo '✅ No ar em https://bachtold-educacao.vercel.app'",
+      "options": { "cwd": "${workspaceFolder}" },
+      "presentation": { "reveal": "always", "panel": "shared", "clear": true, "focus": true },
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    }
+  ]
+}
