@@ -4,3 +4,4 @@ server.js
 # Arquivos de apoio à edição (não vão para o site publicado)
 COMO-EDITAR.md
 .vscode
+.claude
