@@ -345,7 +345,7 @@ h3 { font-size: 1.25rem; }
 .price-alt { font-size: .95rem; color: var(--muted); margin-top: 6px; }
 .price-alt strong { color: var(--blue-600); font-weight: 700; }
 .price-contract { font-size: .82rem; color: var(--muted); margin-top: 2px; }
-.price-card .btn { margin-top: auto; align-self: flex-start; }
+.price-card .btn { margin-top: auto; align-self: flex-start; white-space: normal; text-align: center; }
 
 .price-note { text-align: center; margin-top: 20px; font-size: .85rem; color: var(--muted); font-style: italic; }
 
@@ -486,11 +486,14 @@ h3 { font-size: 1.25rem; }
   .form-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-nav { justify-content: flex-start; }
+  .site-footer { padding-bottom: 100px; }
 }
 
 @media (max-width: 420px) {
   .grid-4 { grid-template-columns: 1fr; }
-  .hero-actions .btn { width: 100%; }
+  .hero-actions .btn,
+  .method-actions .btn,
+  .diagnostic-band .btn { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
