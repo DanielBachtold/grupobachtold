@@ -211,6 +211,9 @@ h3 { font-size: 1.25rem; }
   max-width: 620px;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.hero-trust { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; margin-top: 30px; }
+.hero-trust li { display: flex; align-items: center; gap: 8px; font-size: .92rem; color: var(--muted); }
+.hero-trust li::before { content: "✓"; color: var(--green-700); font-weight: 700; }
 
 /* ===================== Seções genéricas ===================== */
 .section { padding: clamp(56px, 8vw, 96px) 0; }
