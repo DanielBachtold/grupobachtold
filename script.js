@@ -19,6 +19,25 @@ nav.querySelectorAll("a").forEach((link) => {
 // Ano dinâmico no rodapé
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// ===================== Meta Pixel: evento de Lead =====================
+// Dispara um Lead sempre que a pessoa toma a ação de contato (envia o
+// formulário ou clica em qualquer link/botão que leva ao WhatsApp).
+// O fbq é definido no <head>; se por acaso não estiver, a chamada é ignorada.
+function trackLead(origem) {
+  if (typeof window.fbq === "function") {
+    window.fbq("track", "Lead", origem ? { content_name: origem } : {});
+  }
+}
+
+// Qualquer link que leve ao WhatsApp conta como Lead ao ser clicado:
+// botão flutuante, "Falar no WhatsApp" do hero, "Consultar no WhatsApp"
+// dos cursos, a faixa de diagnóstico e o "Fale direto no WhatsApp" do form.
+document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="wa.link"]').forEach((a) => {
+  a.addEventListener("click", () => {
+    trackLead((a.getAttribute("aria-label") || a.textContent || "WhatsApp").trim());
+  });
+});
+
 // ===================== Cadastro -> WhatsApp + Planilha Google =====================
 const WHATS_NUMBER = "5545991056719";
 // URL do app da Web do Google Apps Script (termina em /exec) que grava os cadastros
@@ -84,6 +103,9 @@ if (form) {
 
     // Grava na planilha em paralelo (não bloqueia a abertura do WhatsApp)
     saveToSheet();
+
+    // Conta como Lead no Meta Pixel (envio do formulário)
+    trackLead("Formulário de cadastro");
 
     const url = "https://wa.me/" + WHATS_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
 
