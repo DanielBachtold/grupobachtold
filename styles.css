@@ -33,7 +33,6 @@
   --header-bg: rgba(250, 243, 231, .86);
   --nav-mobile-bg: #fffdf8;
   --on-accent: #ffffff;
-  --brand-mark-bg: #24344a;
 
   --maxw: 1140px;
   --radius: 16px;
@@ -157,17 +156,9 @@ h3 { font-size: 1.25rem; }
 }
 .brand { display: flex; align-items: center; gap: 11px; }
 .brand-mark {
-  display: grid;
-  place-items: center;
   width: 42px; height: 42px;
-  background: var(--brand-mark-bg);
-  color: var(--ink);
-  font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 1.5rem;
-  border-radius: 12px;
   flex: none;
-  border: 1px solid var(--line);
+  object-fit: contain;
 }
 .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-name { font-family: var(--font-head); font-weight: 600; font-size: 1.2rem; color: var(--ink); }
@@ -430,7 +421,6 @@ h3 { font-size: 1.25rem; }
 .site-footer { background: var(--surface); color: var(--muted); padding: 48px 0 32px; border-top: 1px solid var(--line); }
 .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px 40px; align-items: start; }
 .footer-brand { display: flex; align-items: center; gap: 14px; }
-.footer-brand .brand-mark { background: rgba(36, 52, 74, .10); }
 .footer-brand strong { color: var(--ink); font-size: 1.1rem; display: block; }
 .footer-brand p { font-size: .88rem; color: var(--muted); }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 18px; justify-content: flex-end; }
