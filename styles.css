@@ -1,44 +1,46 @@
 /* ===================================================================
-   Bächtold Educação — Landing Page (TEMA DARK)
-   Identidade: navy profundo + azul luminoso de acento
+   Bächtold Educação — Landing Page (TEMA "PAPEL E GIZ")
+   Identidade: fundo creme quente + terracota de acento + navy de marca
    =================================================================== */
 
 :root {
-  /* Superfícies escuras + azul de acento luminoso (nomes de token mantidos) */
-  --navy-900: #0a1a2f;  /* fundo da PÁGINA */
-  --navy-800: #0f2540;  /* superfície de card / header / form */
-  --navy: #16324f;      /* superfície mais elevada / hover */
-  --blue-700: #244f86;  /* CTA / botões / marca */
-  --blue-600: #6e93cc;  /* acento de texto (.accent, eyebrow, ênfase) */
-  --blue-500: #4a7ac0;  /* anel de foco */
-  --blue-100: rgba(44, 94, 160, .16); /* pill translúcida / brilho de foco */
+  /* Navy de marca — usado no "carimbo" da marca e em superfícies escuras pontuais (nomes de token mantidos) */
+  --navy-900: #1e2a3a;  /* navy mais profundo (placeholder de vídeo) */
+  --navy-800: #24344a;  /* navy médio (referência) */
+  --navy: #2e4258;      /* navy mais claro (referência) */
 
-  /* Neutros (invertidos p/ dark) */
-  --ink: #e8eefb;       /* texto principal claro */
-  --muted: #9fb2cc;     /* texto secundário */
-  --line: rgba(150, 178, 220, .16); /* bordas/linhas translúcidas */
-  --grid-line: rgba(130, 164, 218, .055); /* linhas do fundo quadriculado (papel de caderno) */
-  --bg: #0a1a2f;
-  --bg-soft: #0e2138;   /* seções alternadas */
-  --bg-navy: #0a1a2f;
+  /* Terracota — acento principal / CTA / marca */
+  --blue-700: #c4501f;  /* CTA / botões / marca */
+  --blue-600: #9a3d18;  /* acento de texto (.accent, eyebrow, ênfase) — mais escuro p/ contraste no claro */
+  --blue-500: #d97142;  /* anel de foco / hover claro dos botões */
+  --blue-100: rgba(196, 80, 31, .14); /* pill translúcida / brilho de foco */
+
+  /* Neutros (tema claro) */
+  --ink: #23303f;       /* texto principal — grafite-marinho */
+  --muted: #6e6a61;     /* texto secundário — cinza quente */
+  --line: rgba(35, 48, 63, .16); /* bordas/linhas translúcidas */
+  --grid-line: rgba(35, 48, 63, .06); /* linhas do fundo quadriculado (papel de caderno) */
+  --bg: #faf3e7;        /* creme — fundo da página */
+  --bg-soft: #f1e7d4;   /* seções alternadas — bege mais profundo */
+  --bg-navy: #24344a;
 
   --green: #25d366;     /* WhatsApp */
-  --green-700: #46d98a; /* verde claro p/ check no escuro */
+  --green-700: #2e7a4c; /* verde floresta p/ check no claro */
 
-  /* Superfícies reutilizáveis (substituem os #fff hardcoded) */
-  --surface: #0f2540;
-  --surface-2: #16324f;
-  --header-bg: rgba(10, 26, 47, .82);
-  --nav-mobile-bg: #0f2540;
+  /* Superfícies reutilizáveis */
+  --surface: #fffdf8;   /* branco quente — cards */
+  --surface-2: #fff7ea; /* bege claro — inputs / elevado */
+  --header-bg: rgba(250, 243, 231, .86);
+  --nav-mobile-bg: #fffdf8;
   --on-accent: #ffffff;
-  --brand-mark-bg: #16324f;
+  --brand-mark-bg: #24344a;
 
   --maxw: 1140px;
   --radius: 16px;
   --radius-sm: 10px;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, .40);
-  --shadow: 0 12px 30px rgba(0, 0, 0, .45);
-  --shadow-lg: 0 24px 60px rgba(0, 0, 0, .55);
+  --shadow-sm: 0 1px 3px rgba(35, 26, 15, .10);
+  --shadow: 0 12px 28px rgba(35, 26, 15, .12);
+  --shadow-lg: 0 24px 56px rgba(35, 26, 15, .16);
 
   --font-head: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
@@ -115,9 +117,9 @@ h3 { font-size: 1.25rem; }
 .btn-primary {
   background: var(--blue-700);
   color: var(--on-accent);
-  box-shadow: 0 0 0 1px rgba(130, 164, 218, .22), 0 8px 22px rgba(44, 94, 160, .40);
+  box-shadow: 0 0 0 1px rgba(196, 80, 31, .18), 0 10px 22px rgba(196, 80, 31, .22);
 }
-.btn-primary:hover { background: var(--blue-600); color: #08213f; transform: translateY(-2px); }
+.btn-primary:hover { background: var(--blue-500); color: var(--ink); transform: translateY(-2px); }
 
 .btn-outline { background: transparent; color: var(--blue-600); border-color: var(--blue-700); }
 .btn-outline:hover { background: var(--blue-700); color: var(--on-accent); }
@@ -191,11 +193,11 @@ h3 { font-size: 1.25rem; }
   position: relative;
   background-color: var(--bg);
   background-image:
-    radial-gradient(1100px 560px at 80% -10%, rgba(44, 94, 160, .22), transparent 60%),
-    radial-gradient(760px 420px at 12% 0%, rgba(44, 94, 160, .10), transparent 55%),
+    radial-gradient(1100px 560px at 80% -10%, rgba(196, 80, 31, .14), transparent 60%),
+    radial-gradient(760px 420px at 12% 0%, rgba(196, 80, 31, .07), transparent 55%),
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(180deg, #0d2038, var(--bg) 72%);
+    linear-gradient(180deg, var(--bg-soft), var(--bg) 72%);
   background-size: auto, auto, 44px 44px, 44px 44px, auto;
   background-attachment: fixed, fixed, fixed, fixed, scroll;
   background-position: center;
@@ -237,7 +239,7 @@ h3 { font-size: 1.25rem; }
 .prose { max-width: 640px; margin: 0 auto; }
 .prose p { margin: 0 0 16px; color: var(--ink); font-size: 1.08rem; line-height: 1.75; }
 .prose p:last-child { margin-bottom: 0; }
-.prose strong { color: #fff; }
+.prose strong { color: var(--blue-600); }
 
 /* ===================== Listas com check ===================== */
 .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
@@ -262,7 +264,7 @@ h3 { font-size: 1.25rem; }
   font-size: 1.5rem;
   background: var(--surface);
   color: var(--blue-600);
-  border: 1px solid rgba(44, 94, 160, .35);
+  border: 1px solid rgba(196, 80, 31, .35);
   box-shadow: var(--shadow-sm);
 }
 .feature h3 { font-size: 1.1rem; margin-bottom: 6px; }
@@ -322,7 +324,7 @@ h3 { font-size: 1.25rem; }
 .price-card-highlight {
   background: var(--surface-2);
   border-color: var(--blue-700);
-  box-shadow: 0 0 0 1px rgba(44, 94, 160, .35), var(--shadow);
+  box-shadow: 0 0 0 1px rgba(196, 80, 31, .35), var(--shadow);
 }
 .price-card h4 { font-family: var(--font-head); font-weight: 600; font-size: 1.25rem; color: var(--ink); margin-top: 2px; }
 
@@ -331,7 +333,7 @@ h3 { font-size: 1.25rem; }
   align-self: flex-start;
   background: var(--blue-100);
   color: var(--blue-600);
-  border: 1px solid rgba(44, 94, 160, .28);
+  border: 1px solid rgba(196, 80, 31, .28);
   font-size: .75rem;
   font-weight: 700;
   letter-spacing: .04em;
@@ -378,13 +380,13 @@ h3 { font-size: 1.25rem; }
   width: 100%;
   transition: border-color .15s ease, box-shadow .15s ease;
 }
-.field input::placeholder, .field textarea::placeholder { color: rgba(159, 178, 204, .6); }
+.field input::placeholder, .field textarea::placeholder { color: rgba(110, 106, 97, .55); }
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none;
   border-color: var(--blue-500);
   box-shadow: 0 0 0 3px var(--blue-100);
 }
-.field input:user-invalid, .field select:user-invalid { border-color: #f27a7a; }
+.field input:user-invalid, .field select:user-invalid { border-color: #e2574f; }
 .field textarea { resize: vertical; min-height: 84px; }
 
 .consent { display: flex; flex-direction: row; align-items: flex-start; gap: 10px; }
@@ -428,7 +430,7 @@ h3 { font-size: 1.25rem; }
 .site-footer { background: var(--surface); color: var(--muted); padding: 48px 0 32px; border-top: 1px solid var(--line); }
 .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px 40px; align-items: start; }
 .footer-brand { display: flex; align-items: center; gap: 14px; }
-.footer-brand .brand-mark { background: rgba(150, 178, 220, .12); }
+.footer-brand .brand-mark { background: rgba(36, 52, 74, .10); }
 .footer-brand strong { color: var(--ink); font-size: 1.1rem; display: block; }
 .footer-brand p { font-size: .88rem; color: var(--muted); }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 18px; justify-content: flex-end; }
@@ -518,7 +520,7 @@ h3 { font-size: 1.25rem; }
   margin-top: 40px;
   padding: 32px;
   background: var(--surface);
-  border: 1px solid rgba(130, 164, 218, 0.25);
+  border: 1px solid rgba(196, 80, 31, 0.25);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
