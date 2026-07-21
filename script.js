@@ -42,7 +42,7 @@ document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href
 const WHATS_NUMBER = "5545991056719";
 // URL do app da Web do Google Apps Script (termina em /exec) que grava os cadastros
 // numa Planilha Google. Se ficar vazio, o cadastro só vai pro WhatsApp.
-const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbxzR83uo1OODaGCikFMXykXllza3uFBTibcFPvSCMcgY0v3ksxlfFn63N5QUI--ZHZhQA/exec";
+const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbxHI1a-1gAMRhbPw4uqZdkIjLABMNdwNg0EcbHlWXFVJsXxTFedRIcp0_qh_6hT4CgK9w/exec";
 const form = document.getElementById("cadastro-form");
 
 if (form) {
