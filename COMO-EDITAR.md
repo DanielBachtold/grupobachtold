@@ -24,14 +24,12 @@ Este site é **estático** (HTML/CSS/JavaScript). Você edita os arquivos nesta 
 1. Abra `index.html`, **Cmd + F** por um pedaço do texto atual.
 2. Troque o que está **entre `>` e `<`**. Ex.: em `<h2>Preço justo</h2>`, mude só `Preço justo`.
 
-### ...um preço
-1. Em `index.html`, **Cmd + F** por `R$ 120` (ou `150`, `200`, `420`, `500`). Troque o número.
-
 ### ...uma cor
 1. Em `styles.css`, no topo (`:root`):
    ```css
-   --navy-900: #0f2a4a;   /* azul marinho principal */
-   --blue-600: #245aa6;   /* azul de destaque */
+   --navy-950: #04122a;   /* azul marinho da logo (hero, rodapé, cadastro) */
+   --blue-600: #1f5fd6;   /* azul principal (botões, links) */
+   --blue-300: #8cb8ff;   /* azul claro (destaques sobre o marinho) */
    ```
    Troque o código da cor.
 
@@ -58,7 +56,6 @@ Este site é **estático** (HTML/CSS/JavaScript). Você edita os arquivos nesta 
 ---
 
 ## 🚫 NÃO mexa nestes pontos (quebram o formulário)
-- Nos botões de preço, o trecho **`data-formato="..."`** — tem que bater **exatamente** com as opções do formulário (incluindo o traço longo "—"). Mude só o texto do botão.
 - No `script.js`: a linha **`SHEET_ENDPOINT`** (link da sua planilha) e o número do WhatsApp.
 - Os **`id="..."`** das seções.
 
