@@ -50,7 +50,7 @@ Este site é **estático** (HTML/CSS/JavaScript). Você edita os arquivos nesta 
 
 1. Aperte **Cmd + Shift + B**
    *(ou menu **Terminal → Run Build Task…** → "🚀 Publicar site na internet")*
-2. Espere aparecer **✅ No ar em https://bachtold-educacao.vercel.app**.
+2. Espere aparecer **✅ No ar em https://www.bachtoldeducacao.com.br**.
 3. Pronto.
 
 ---
